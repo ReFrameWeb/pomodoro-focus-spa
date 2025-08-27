@@ -1,0 +1,65 @@
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes fillCircle {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: var(--dash-offset);
+    }
+}
+
+.glass {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(74, 222, 128, 0.4);
+    animation: float 15s infinite linear;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.glow-text {
+    text-shadow: 0 0 8px rgba(74, 222, 128, 0.7);
+}
+
+.glow {
+    box-shadow: 0 0 15px 2px rgba(74, 222, 128, 0.5);
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 222, 128, 0.4);
+}
+
+#timer-circle {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
